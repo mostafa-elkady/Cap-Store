@@ -1,0 +1,49 @@
+.hat-section {
+    padding-block: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/row-hats-from-company-s-background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+
+
+    h2 {
+        font-family: oswald;
+        font-size: 4.1rem;
+    }
+
+    h3 {
+        font-family: oswald;
+        font-size: 1.5rem;
+        margin-block: 1.2rem;
+    }
+
+    .learn-more-btn {
+        background-color: #000;
+        color: #fff;
+        padding: 1.2rem;
+        text-decoration: none;
+        border-radius: 1rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        display: inline-block;
+        transition: all 0.3s ease; // Add smooth transition
+        text-transform: uppercase;
+
+        &:hover {
+            color: var(--orange);
+            transform: translateY(-2px); // Slight lift effect
+
+        }
+    }
+    
+}
+.features {
+    background-color:var(--grey) ;
+    color: #fff;
+    padding-block: 3rem;
+    h3 {
+        font-family: oswald;
+        font-size: 1.2rem;
+        margin-block: 1.2rem;
+    }
+}

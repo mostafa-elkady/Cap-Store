@@ -1,0 +1,35 @@
+.footer {
+    background-color: var(--grey);
+
+    .footer-subhead {
+        font-family: Oswald;
+        font-size: .9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    li {
+        margin-bottom: .6rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        margin-left: 0.3rem;
+        font-size: 0.85rem;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+            color: var(--orange);
+        }
+
+    }
+
+    span {
+        font-size: 0.85rem;
+    }
+
+    .footer-logo img {
+        max-width: 11rem;
+        margin-bottom: 2rem;
+    }
+}

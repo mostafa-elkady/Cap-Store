@@ -1,0 +1,33 @@
+.header {
+    background-image: url("/assets/images/woman-blue-hat-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    margin-top: 4rem;
+    // heading
+    h1 {
+    font-family: Oswald;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.find-btn {
+    background-color: var(--orange);
+    color: #fff;
+    padding: 1.2rem;
+    text-decoration: none;
+    border-radius: .6rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    display: inline-block;
+    transition: all 0.3s ease; // Add smooth transition
+
+    &:hover {
+        background-color:#a83005; // Darkens the orange color
+        transform: translateY(-2px); // Slight lift effect
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adds shadow on hover
+    }
+}
+}
+

@@ -1,0 +1,47 @@
+.navbar-wrapper {
+    background-color: var(--grey);
+    transition: all 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    // Scrolled state
+    &.scrolled {
+        background-color: rgba(33, 37, 41, 0.7);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+.nav-link , .nav-item i{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff !important;
+    cursor: pointer;
+}
+.nav-link:hover , .nav-item i:hover {
+    color:var(--orange) !important;
+}
+
+.logo {
+    max-height: 60px;
+    transition: max-height 0.5s ease-in-out;
+}
+.scrolled .logo {
+    max-height: 30px;
+}
+
+
+.count-details {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    padding: 0.4rem;
+    background-color: var(--orange);
+    margin-left: 0.25rem;
+    border-radius: 6px;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 var(--orange);;
+}
