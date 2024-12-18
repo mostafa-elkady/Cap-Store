@@ -3,11 +3,12 @@ import { IStore } from '../../models/istore';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { HatSectionComponent } from "../hat-section/hat-section.component";
+import { ShopComponent } from "../shop/shop.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, HatSectionComponent],
+  imports: [CommonModule, HeaderComponent, HatSectionComponent, ShopComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
