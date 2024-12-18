@@ -1,0 +1,58 @@
+<div class="container">
+    <section class="collection">
+      <h2>NEW COLLECTION</h2>
+      <div class="separator d-flex align-items-center gap-1">
+        <span class="line"></span>
+        <i class="far fa-heart heart"></i>
+        <span class="line"></span>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-6 col-md-3 gap-1" *ngFor="let product of (products$ | async)?.slice(0, 4)">
+          <!-- Card -->
+          <div class="collection-card">
+            <div class="image-container position-relative overflow-hidden">
+              <img
+                [src]="selectedImage || product.imageUrl"
+                [alt]="product.name"
+                class="img-fluid"
+              />
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li class="overlay">
+                  <i
+                    class="quick-view far fa-eye"
+                    (click)="onQuickView(product.id!)"
+                  >
+                  </i>
+                </li>
+                <li class="overlay">
+                  <i
+                    class="add-to-wishlist far fa-heart"
+                    (click)="addToWishlist(product.id!)"
+                  >
+                  </i>
+                </li>
+              </ul>
+              <div class="add-to-cart">
+                <button class="btn">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
+              </div>
+            </div>
+            <!-- <div class="gallery">
+              <img *ngFor="let img of product.galleryImages" 
+                   [src]="img" 
+                   (click)="selectedImage = img" 
+                   class="thumbnail" 
+                   [alt]="product.name" />
+            </div> -->
+            <div class="collection-card-body">
+              <span class="category-tag dotted">{{ product.category }}</span>
+              <h4 class="collection-card-title dotted">{{ product.name }}</h4>
+              <p class="collection-card-price text-success">
+                {{ product.price | currency }}
+              </p>
+            </div>
+          </div>
+          <!-- Card -->
+        </div>
+      </div>
+    </section>
+  </div>

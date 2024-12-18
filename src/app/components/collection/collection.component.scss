@@ -1,0 +1,132 @@
+.collection {
+    padding-block: 7rem;
+
+    h2 {
+        font-family: oswald;
+        font-size: 3.5rem;
+        color: #333;
+        padding: 10px;
+        position: relative;
+    }
+
+    .line {
+        height: 1.2px;
+        background-color: var(--orange);
+        display: inline-block;
+        width: 8rem;
+    }
+
+    .heart {
+        color: var(--orange);
+    }
+
+    .collection-card {
+        transition: 0.5s ease-in-out;
+        margin-bottom: 1rem;
+        overflow: hidden;
+
+        &:hover {
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        &:hover ul {
+            right: 1rem;
+        }
+
+        &:hover .add-to-cart {
+            bottom: 0;
+        }
+    }
+
+    .collection-card-body {
+        text-align: center;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+        padding-bottom: 1.5rem
+    }
+
+    .image-container {
+        transition: 0.6s ease-in-out;
+    }
+
+    ul {
+        position: absolute;
+        top: 1rem;
+        right: -3rem;
+        transition: 0.6s ease-in-out;
+    }
+
+    .overlay {
+
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+
+    .dotted {
+        cursor: pointer;
+        text-underline-offset: 3px;
+        text-decoration: underline;
+    }
+
+    .category-tag {
+        font-size: .7rem;
+        color: gray;
+    }
+
+    .collection-card-title {
+        font-size: .9rem;
+        color: #333;
+        font-family: oswald;
+        padding-block: .5rem;
+        font-weight: 500;
+    }
+
+    .gallery {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        .thumbnail {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            &:hover {
+                border-color: #007bff;
+            }
+        }
+    }
+
+    .add-to-cart {
+        position: absolute;
+        bottom: -50px;
+        transition: 0.6s ease-in-out;
+        width: 100%;
+        button {
+            color: #fff;
+            background-color: var(--orange);
+            width: 100% !important;
+            border-radius: 0 !important;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            display: block;
+
+
+        }
+
+    }
+}
