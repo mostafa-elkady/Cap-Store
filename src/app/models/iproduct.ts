@@ -1,3 +1,5 @@
+import { ICategory } from "./icategory";
+
 export interface IProduct {
     id: string;
     name: string;
@@ -6,7 +8,7 @@ export interface IProduct {
     description: string;
     imageUrl: string;
     galleryImages: string[]; 
-    category: string;
+    category:ICategory;
     sizes?: string[];
     colors?: string[];
     inStock: boolean;

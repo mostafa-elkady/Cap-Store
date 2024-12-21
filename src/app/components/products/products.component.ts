@@ -1,27 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../models/iproduct';
 import { Observable, BehaviorSubject, of } from 'rxjs';
 import { map, catchError, startWith } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
-
 @Component({
-  selector: 'app-collection',
+  selector: 'app-products',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './collection.component.html',
-  styleUrl: './collection.component.scss'
+  templateUrl: './products.component.html',
+  styleUrl: './products.component.scss'
 })
-export class CollectionComponent implements OnInit {
+export class ProductsComponent implements OnInit {
   products$: Observable<IProduct[]> = new Observable<IProduct[]>();
   loading$ = new BehaviorSubject<boolean>(true);
   error$ = new BehaviorSubject<string | null>(null);
   selectedImage: string | null = null;
+  @Input() startSlice:number=0;
+  @Input() endSlice:number=0;
+  @Input() heading :string='';
 
   ngOnInit() {
     this.loadProducts();
-    
+
   }
 
   constructor(
@@ -59,7 +61,7 @@ export class CollectionComponent implements OnInit {
   addToWishlist(productId: string | undefined) {
     if (productId) {
       console.log("Product added sucessfully");
-      
+
     }
   }
 }
